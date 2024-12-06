@@ -1,13 +1,11 @@
 import React from 'react';
-import { useForm } from '../hooks/useForm'; //hook que maneja el estado del fromulario del componente TodoAdd
+import { useForm } from '../hooks/useForm'; 
 
-
-//componente para agregar nuevas tareas a lista
-export const TodoAdd = ({ handleNewTodo }) => { //declara componente TodoAdd con la prop handleNewTodo(funcion que agrega la nueva tarea)
+export const TodoAdd = ({ handleNewTodo }) => { 
 	
-	const { description, onInputChange, onResetForm } = useForm({ // usamos hook useform que devuelve objeto con:
-		description: '',                                         //description: valor del campo de texto donde usuario escribe
-	}); // onInputChange: funcion que se invoca cada vez que el usuario cambia el valor del campo de entrada.
+	const { description, onInputChange, onResetForm } = useForm({
+		description: '',                                         
+	}); 
 
 	
 	const onFormSubmit = e => {
